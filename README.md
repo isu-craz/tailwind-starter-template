@@ -47,7 +47,7 @@
 
 ```bash
 # 1. Clone or download this repository
-git clone <your-repo-url> my-project
+git clone https://github.com/isu-craz/tailwind-starter-template.git my-project
 cd my-project
 
 # 2. Install dependencies
@@ -134,13 +134,13 @@ tailwind-starter-template/
 {
   "name": "your-project-name",
   "description": "Your project description",
-  "author": "Your Name"
+  "author": "isu-craz"
 }
 ```
 
 **Update HTML titles and meta tags:**
 ```html
-<title>Your Project Name</title>
+<title>Tailwind Starter Template</title>
 <meta name="description" content="Your project description">
 ```
 
@@ -483,9 +483,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 Need help? Found a bug? Have a suggestion?
 
-- 📧 **Email**: your-email@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/your-repo/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/your-username/your-repo/discussions)
+- 📧 **Email**: isu.craz.social@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/isu-craz/tailwind-starter-template/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/isu-craz/tailwind-starter-template/discussions)
 
 ---
 
