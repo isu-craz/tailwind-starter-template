@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Tailwind Starter Template</title>
+    <link href="../src/css/input.css" rel="stylesheet">
+</head>
+<body data-page="forms" class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40" data-component="navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="../index.html" class="text-xl font-bold text-gradient-primary">Starter Template</a>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="../index.html" class="nav-link">Home</a>
+                        <a href="../index.html#features" class="nav-link">Features</a>
+                        <a href="../index.html#components" class="nav-link">Components</a>
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                        <a href="forms.html" class="nav-link nav-link-active">Forms</a>
+                        <a href="about.html" class="nav-link">About</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <button class="p-2 text-gray-500 hover:text-gray-900 rounded-lg" data-theme-toggle>
+                        <div data-theme="light">🌙</div>
+                        <div data-theme="dark" style="display: none;">☀️</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Form Examples</h1>
+            <p class="text-xl text-gray-600">Interactive forms with validation and beautiful styling</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card mb-8">
+            <div class="card-header">
+                <h2 class="text-2xl font-semibold">Contact Form</h2>
+                <p class="text-gray-600 mt-1">Complete form with validation</p>
+            </div>
+            <div class="card-body">
+                <form data-validate id="contact-form">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName"
+                                class="form-input"
+                                data-validate="required|minLength:2"
+                            >
+                            <div id="firstName-error" class="form-error"></div>
+                        </div>
+                        <div>
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName"
+                                class="form-input"
+                                data-validate="required|minLength:2"
+                            >
+                            <div id="lastName-error" class="form-error"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="form-label" for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            class="form-input"
+                            data-validate="required|email"
+                        >
+                        <div id="email-error" class="form-error"></div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="form-label" for="subject">Subject</label>
+                        <select id="subject" name="subject" class="form-input" data-validate="required">
+                            <option value="">Choose a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                        <div id="subject-error" class="form-error"></div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message"
+                            rows="4"
+                            class="form-input"
+                            data-validate="required|minLength:10"
+                        ></textarea>
+                        <div id="message-error" class="form-error"></div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="newsletter" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-600">
+                                Subscribe to our newsletter
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="card mb-8">
+            <div class="card-header">
+                <h2 class="text-2xl font-semibold">Login Form</h2>
+            </div>
+            <div class="card-body">
+                <form data-validate id="login-form">
+                    <div class="mb-4">
+                        <label class="form-label" for="loginEmail">Email</label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            name="email"
+                            class="form-input"
+                            data-validate="required|email"
+                        >
+                        <div data-error="email" class="form-error"></div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="form-label" for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            class="form-input"
+                            data-validate="required|minLength:6"
+                        >
+                        <div data-error="password" class="form-error"></div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="remember" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                        </label>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800">
+                            Forgot password?
+                        </a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Form Elements Showcase -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-2xl font-semibold">Form Elements</h2>
+                <p class="text-gray-600 mt-1">All available form components</p>
+            </div>
+            <div class="card-body space-y-6">
+                <!-- Text Inputs -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Text Inputs</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="form-label">Default Input</label>
+                            <input type="text" class="form-input" placeholder="Enter text">
+                        </div>
+                        <div>
+                            <label class="form-label">Disabled Input</label>
+                            <input type="text" class="form-input opacity-50" disabled value="Disabled">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Buttons</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="btn-primary">Primary</button>
+                        <button class="btn-secondary">Secondary</button>
+                        <button class="btn-outline">Outline</button>
+                        <button class="btn-sm btn-primary">Small</button>
+                        <button class="btn-lg btn-primary">Large</button>
+                    </div>
+                </div>
+
+                <!-- Radio and Checkboxes -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Selection</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="form-label">Choose an option:</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="option" value="1" class="text-blue-600">
+                                    <span class="ml-2">Option 1</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="option" value="2" class="text-blue-600">
+                                    <span class="ml-2">Option 2</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="form-label">Select multiple:</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-blue-600">
+                                    <span class="ml-2">Checkbox 1</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-blue-600">
+                                    <span class="ml-2">Checkbox 2</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="../src/js/main.js"></script>
+    <script type="module">
+        // Add form submission handlers
+        document.addEventListener('form:submit', (e) => {
+            const { formData, form } = e.detail
+            console.log('Form submitted:', formData)
+            
+            // Show success message
+            if (window.app.getComponent('toast')) {
+                window.app.getComponent('toast').success('Form submitted successfully!')
+            }
+            
+            // Reset form after delay
+            setTimeout(() => {
+                form.reset()
+                window.app.getComponent(`form-${form.id}`)?.reset()
+            }, 1500)
+        })
+    </script>
+</body>
+</html>

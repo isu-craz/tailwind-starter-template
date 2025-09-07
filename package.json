@@ -1,0 +1,39 @@
+{
+  "name": "tailwind-starter-template",
+  "version": "1.0.0",
+  "description": "A comprehensive starter template for HTML, CSS, JavaScript and Tailwind CSS projects",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "css:build": "postcss src/css/input.css -o public/css/output.css",
+    "css:watch": "postcss src/css/input.css -o public/css/output.css --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "setup": "node scripts/setup.js"
+  },
+  "keywords": [
+    "tailwindcss",
+    "html",
+    "css",
+    "javascript",
+    "starter-template",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.1.1",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.13"
+  }
+}
