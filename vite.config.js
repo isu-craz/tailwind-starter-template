@@ -15,8 +15,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        about: './pages/about.html',
-        dashboard: './pages/dashboard.html',
         forms: './pages/forms.html'
       }
     }
